@@ -199,3 +199,11 @@ function themud.make_command(id, _commands)
 		end
 	end
 end
+
+function themud.help_command(id, _commands)
+	msg2(id, serverMSGS["info"].."The list of the commands: ");
+
+	for i=1, #_CMDS do
+		msg2(id, "\169250250250".._CMDS[i][1]..": ".._CMDS[i][2]..". Usage: ".._CMDS[i][3]);
+	end
+end

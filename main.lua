@@ -130,6 +130,17 @@ function _say(id, text)
 				msg2(id, serverMSGS["error"].."You are not allowed to use this command");
 				return 1;
 			end
+		elseif _commands[1]:sub(2) == _CMDS[11][1] then
+			if checkPriv(id, 11) then
+				themud.help_command(id, _commands);
+				return 1;
+			else
+				msg2(id, serverMSGS["error"].."You are not allowed to use this command");
+				return 1;
+			end
+		else
+			msg2(id, serverMSGS["error"].."Unknown command");
+			return 1;
 		end
 	end
 

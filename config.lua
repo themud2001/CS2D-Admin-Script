@@ -89,6 +89,7 @@ _CMDS = {
 	[8] = {"hats", "Opens up the hats menu", prefix.."hats", ["priv"] = {"admin", "moderator", "vip"}};
 	[9] = {"restart", "Restarts the round", prefix.."restart [<time>]", ["priv"] = {"admin", "moderator"}};
 	[10] = {"make", "Promotes/Demotes players", prefix.."make <id> <rank>", ["priv"] = {"admin"}};
+	[11] = {"help", "Lists all the commands", prefix.."help", ["priv"] = {"admin", "moderator", "vip"}};
 };
 
 for _, scripts in pairs(modules) do
